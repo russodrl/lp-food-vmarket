@@ -193,6 +193,29 @@ footer a{color:var(--verde-claro);text-decoration:none}
 .dcard-head .who b{display:block;font-size:15px;color:var(--noite)}
 .dcard-head .who span{font-size:13px;color:var(--tinta-suave)}
 .dcard-head .badge{height:46px;width:46px;max-width:46px;object-fit:contain;flex-shrink:0;opacity:.96}
+
+.proof-inline{font-size:14px;color:#CFE2D7;margin-top:18px;max-width:560px}
+.saving-card{margin-top:22px;max-width:560px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:14px;padding:16px 18px;color:#F4E8DC;font-size:15px}
+.saving-card b{color:#fff}
+.audience{background:#fff}
+.audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+.aud-card{border:1px solid var(--linho-borda);border-radius:16px;padding:24px 20px;background:#fff}
+.aud-card h3{font-size:18px;color:var(--noite);margin-bottom:8px}
+.aud-card p{font-size:14.5px;color:var(--tinta-suave)}
+.before-after{background:#fff}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:38px 0 28px}
+.ba-card{border-radius:18px;padding:28px;border:1px solid var(--linho-borda)}
+.ba-before{background:#fff7f0}.ba-after{background:#eef7f1}
+.ba-card h3{font-size:22px;color:var(--noite);margin-bottom:14px}
+.ba-card ul{list-style:none}.ba-card li{position:relative;padding:8px 0 8px 28px;color:var(--tinta)}
+.ba-card li::before{position:absolute;left:0;top:8px;font-weight:800}.ba-before li::before{content:"×";color:#B35E22}.ba-after li::before{content:"✓";color:var(--folha)}
+.video-intro{text-align:center;max-width:760px;margin:44px auto -18px}.video-intro h3{font-size:clamp(22px,3vw,30px);color:var(--noite)}.video-intro p{margin-top:10px;color:var(--tinta-suave)}
+.center-cta{text-align:center;margin:26px auto 0}
+.results{background:#fff}.result-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}.result-grid div{border:1px solid var(--linho-borda);border-radius:16px;padding:22px 18px;background:var(--linho)}.result-grid b{display:block;color:var(--terra);font-family:'DM Mono',monospace;font-size:24px;margin-bottom:8px}.result-grid span{font-size:14.5px;color:var(--tinta)}
+.mobile-sticky-cta{display:none}
+@media (max-width:960px){.audience-grid{grid-template-columns:1fr 1fr}.ba-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(30px,9vw,44px)}}
+@media (max-width:600px){body{padding-bottom:76px}.audience-grid,.result-grid{grid-template-columns:1fr}.mobile-sticky-cta{display:block;position:fixed;left:14px;right:14px;bottom:12px;z-index:80;text-align:center;background:var(--terra);color:#fff;font-weight:800;text-decoration:none;border-radius:14px;padding:16px 20px;box-shadow:0 14px 34px rgba(26,58,47,.28)}}
+
 </style>
 </head>
 <body>
@@ -203,7 +226,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
 <header>
   <div class="nav">
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="logodark" alt="VMarket Food Solutions">
-    <a class="btn" href="form/">Falar com um consultor</a>
+    <a class="btn cta-track" data-cta="header" href="form/">Simular economia</a>
   </div>
 </header>
 
@@ -212,12 +235,14 @@ footer a{color:var(--verde-claro);text-decoration:none}
     <div class="hero-grid">
       <div>
         <span class="eyebrow">VMarket • A melhor plataforma de compras para o Food Service</span>
-        <h1>A plataforma de compras feita para o seu Restaurante economizar</h1>
-        <p class="lead">Envie cotações automáticas, acesse mais fornecedores, compare os melhores preços, gerencie estoque e economize até 25% em compras</p>
+        <h1>Economize até 25% nas compras do seu restaurante sem depender de planilhas, ligações e áudios no WhatsApp</h1>
+        <p class="lead">Envie cotações automáticas, acesse mais fornecedores, compare o melhor preço de cada item, gerencie estoque e compre com mais margem.</p>
         <div class="cta-row">
-          <a class="btn big" href="form/">Falar com um consultor</a>
-          <span class="cta-note">Demonstração gratuita, sem compromisso</span>
+          <a class="btn big cta-track" data-cta="hero" href="form/">Quero ver quanto posso economizar</a>
+          <span class="cta-note">Demonstração gratuita, sem compromisso, com sua realidade de compras</span>
         </div>
+        <div class="saving-card"><b>Exemplo rápido:</b> se seu restaurante compra R$ 80 mil por mês, 10% de economia representa R$ 8 mil por mês voltando para o caixa.</div>
+        <p class="proof-inline">Usado por operações como Fasano, Meliá, Bourbon, Pecorino, Parmê, Graal e outras.</p>
       </div>
       <div>
         <div class="shot-hero"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Painel de cotação da VMarket com o melhor preço de cada item destacado"></div>
@@ -226,7 +251,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
     <div class="stats">
       <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9.5 20v-6h5v6"/><path d="M3 9h18"/></svg><b>2.000+</b><span>restaurantes, bares e hotéis</span></div>
       <div><svg class="sico" viewBox="0 0 24 24"><rect x="1" y="6.5" width="13" height="9.5" rx="1"/><path d="M14 9.5h4l3.5 4v2.5H14"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg><b>20.000+</b><span>fornecedores cadastrados</span></div>
-      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg><b>R$ 2 bi+</b><span>em compras por ano</span></div>
+      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg><b>R$ 2 bi+</b><span>processados por ano em compras de food service</span></div>
       <div><svg class="sico" viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="17" r="2.6"/></svg><b>até 25%</b><span>de economia no CMV</span></div>
     </div>
   </div>
@@ -234,8 +259,21 @@ footer a{color:var(--verde-claro);text-decoration:none}
 
 <section class="logos">
   <div class="wrap rev">
-    <p class="eyebrow">Quem já compra pela VMarket todos os dias</p>
+    <p class="eyebrow">Operações que já compram melhor com a VMarket</p>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="clientes" alt="Clientes VMarket: Fasano, Meliá, Intercity, Bourbon, Pecorino, Parmê, Graal e outros">
+  </div>
+</section>
+
+<section class="sec audience">
+  <div class="wrap rev">
+    <span class="eyebrow" style="color:var(--folha)">Para quem é</span>
+    <h2 style="margin-top:14px">Feita para quem compra insumos todos os dias e precisa proteger margem</h2>
+    <div class="audience-grid">
+      <div class="aud-card"><h3>Restaurantes</h3><p>Controle compras, fornecedores, estoque e notas sem depender de planilhas.</p></div>
+      <div class="aud-card"><h3>Bares</h3><p>Cote bebidas, alimentos e descartáveis com mais fornecedores e menos retrabalho.</p></div>
+      <div class="aud-card"><h3>Redes e múltiplas unidades</h3><p>Centralize compras, compare preços por unidade e padronize o processo.</p></div>
+      <div class="aud-card"><h3>Hotéis e food service</h3><p>Ganhe rastreabilidade em compras recorrentes, recebimento e controle de estoque.</p></div>
+    </div>
   </div>
 </section>
 
@@ -261,6 +299,18 @@ footer a{color:var(--verde-claro);text-decoration:none}
   </div>
 </section>
 
+<section class="sec before-after">
+  <div class="wrap rev">
+    <span class="eyebrow" style="color:var(--folha)">Antes e depois</span>
+    <h2 style="margin-top:14px">Pare de comprar no escuro e veja o melhor preço antes de fechar pedido</h2>
+    <div class="ba-grid">
+      <div class="ba-card ba-before"><h3>Antes da VMarket</h3><ul><li>Cotação por telefone e áudio no WhatsApp</li><li>Preços espalhados em planilhas e conversas</li><li>Sem histórico confiável de preço por item</li><li>Equipe gastando horas para comparar fornecedor</li></ul></div>
+      <div class="ba-card ba-after"><h3>Com a VMarket</h3><ul><li>Cotação automática para todos os fornecedores</li><li>Fornecedor responde por link, sem ligação</li><li>Melhor preço de cada item destacado na tela</li><li>Histórico, estoque e notas fiscais centralizados</li></ul></div>
+    </div>
+    <a class="btn cta-track" data-cta="before_after" href="form/">Quero cotar melhor com meus fornecedores</a>
+  </div>
+</section>
+
 <section class="sec como">
   <div class="wrap rev">
     <span class="eyebrow" style="color:var(--folha)">Como funciona</span>
@@ -270,9 +320,14 @@ footer a{color:var(--verde-claro);text-decoration:none}
       <div class="step"><div class="ico"><svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg></div><span class="num">02</span><h3>Dispare com 1 clique</h3><p>A cotação chega pra todos os fornecedores por WhatsApp e e-mail. Cada um preenche preço, prazo e condição num link, sem ligação.</p></div>
       <div class="step"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5.5"/></svg></div><span class="num">03</span><h3>Compre pelo melhor preço</h3><p>As respostas voltam consolidadas com o melhor preço de cada item destacado. Você fecha o pedido na hora e o histórico fica salvo.</p></div>
     </div>
+    <div class="video-intro rev">
+      <h3>Veja em 60 segundos como a VMarket encontra o melhor preço para cada item</h3>
+      <p>Entenda o fluxo da cotação automática até o pedido, antes de falar com um consultor.</p>
+    </div>
     <div class="video-wrap rev">
       <div class="video-yt"><iframe src="https://www.youtube-nocookie.com/embed/xOpGOj-Xl3A" title="Conheça a VMarket" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
     </div>
+    <div class="center-cta rev"><a class="btn cta-track" data-cta="video_youtube" href="form/">Quero uma demonstração com minha lista de compras</a></div>
   </div>
 </section>
 
@@ -281,7 +336,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
     <div class="rev">
       <span class="eyebrow" style="color:var(--folha)">A plataforma</span>
       <h2 style="margin-top:14px">Tudo que hoje é telefone, planilha e papel numa tela só</h2>
-      <p class="sub">Dispare cotação para todos fornecedores com 1 clique por WhatsApp. Compare preços, faça pedido, controle estoque e notas fiscais e analise tudo no mesmo lugar.</p>
+      <p class="sub">Se sua equipe ainda pede preço por WhatsApp, você provavelmente está comprando mais caro sem perceber. A VMarket dispara cotações, compara preços, faz pedidos, controla estoque e organiza notas fiscais no mesmo lugar.</p>
     </div>
 
     <div class="video-wrap rev">
@@ -292,6 +347,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
         </video>
       </div>
     </div>
+    <div class="center-cta rev"><a class="btn cta-track" data-cta="platform_video" href="form/">Simular economia com minhas compras</a></div>
 
     <div class="feat-row rev">
       <div>
@@ -339,9 +395,9 @@ footer a{color:var(--verde-claro);text-decoration:none}
 
 <section class="strip rev">
   <div class="wrap">
-    <h2>Veja a plataforma funcionando com a sua lista de compras</h2>
-    <p>Demonstração online com um consultor especialista em compras de food service.</p>
-    <a class="btn big" href="form/">Agendar demonstração gratuita</a>
+    <h2>Faça uma demonstração gratuita e descubra onde sua compra está perdendo margem</h2>
+    <p>Veja a plataforma funcionando com sua lista de produtos, fornecedores e rotina de compras.</p>
+    <a class="btn big cta-track" data-cta="strip" href="form/">Simular minha economia</a>
   </div>
 </section>
 
@@ -390,6 +446,21 @@ footer a{color:var(--verde-claro);text-decoration:none}
   </div>
 </section>
 
+<section class="sec results">
+  <div class="wrap rev">
+    <span class="eyebrow" style="color:var(--folha)">Resultado esperado</span>
+    <h2 style="margin-top:14px">Em poucos dias você consegue tirar a compra manual da rotina</h2>
+    <div class="result-grid">
+      <div><b>1</b><span>Cadastrar produtos e fornecedores</span></div>
+      <div><b>2</b><span>Disparar cotações automáticas</span></div>
+      <div><b>3</b><span>Comparar preços item a item</span></div>
+      <div><b>4</b><span>Comprar pelo melhor preço</span></div>
+      <div><b>5</b><span>Criar histórico de compras</span></div>
+    </div>
+    <p class="sub">A economia vem de mais concorrência entre fornecedores, histórico de preços e escolha do melhor preço por item, não de achismo.</p>
+  </div>
+</section>
+
 <section class="sec func">
   <div class="wrap rev">
     <span class="eyebrow" style="color:var(--folha)">Funcionalidades</span>
@@ -409,7 +480,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
   <div class="wrap rev">
     <span class="eyebrow" style="color:var(--folha)">Depoimentos</span>
     <h2 style="margin-top:14px">Quem usa, recomenda</h2>
-    <p class="sub">Restaurantes, bares e hotéis que automatizaram e economizaram no processo de compras com a VMarket.</p>
+    <p class="sub">Veja o que restaurantes, bares e hotéis dizem depois de substituir planilhas e cotações manuais pela VMarket.</p>
     <div class="depo-grid2">
       <div class="dcard">
         <div class="dcard-head">
@@ -417,7 +488,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
           <div class="who"><b>Éric Vitor</b><span>Canabrava Resort</span></div>
           <img class="badge" src="canabraba.webp" alt="Cana Brava">
         </div>
-        <p>A VMarket foi um divisor de águas no setor de compras. Após a implantação, nossa operação diária aumentou muito a produtividade do processo de cotações. Porém, o que mais impactou foi a redução de custo que tivemos devido à assertividade nas compras, bem como a transparência no processo pra fins de auditoria. Muitíssimo satisfeito!</p>
+        <p>A VMarket foi um divisor de águas no setor de compras. Após a implantação, nossa operação diária aumentou muito a <strong>produtividade</strong> do processo de cotações. Porém, o que mais impactou foi a <strong>redução de custo</strong> que tivemos devido à assertividade nas compras, bem como a <strong>transparência</strong> no processo pra fins de auditoria. Muitíssimo satisfeito!</p>
       </div>
       <div class="dcard">
         <div class="dcard-head">
@@ -425,7 +496,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
           <div class="who"><b>João da Silva</b><span>Grupo Pecorino</span></div>
           <img class="badge" src="pecorino.webp" alt="Pecorino">
         </div>
-        <p>VMarket, a plataforma que conseguiu tirar dos planos e colocar em prática, de forma simples e objetiva, as compras centralizadas de múltiplos CNPJs. Sempre com novas ferramentas pra ajudar a realizar essa compra com a melhor qualidade.</p>
+        <p>VMarket, a plataforma que conseguiu tirar dos planos e colocar em prática, de forma simples e objetiva, as <strong>compras centralizadas</strong> de múltiplos CNPJs. Sempre com novas ferramentas pra ajudar a realizar essa compra com a melhor qualidade.</p>
       </div>
       <div class="dcard">
         <div class="dcard-head">
@@ -433,7 +504,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
           <div class="who"><b>Bruna</b><span>Grupo Pasquim</span></div>
           <img class="badge" src="pasquin.webp" alt="O Pasquim">
         </div>
-        <p>Encontrar um sistema que priorizasse uma interface intuitiva, visual e de fácil utilização era uma prioridade, e um desafio, pra nossa área de compras. Desde que implantamos a VMarket, sei que o time trabalha com mais facilidade e que os erros foram diminuindo.</p>
+        <p>Encontrar um sistema que priorizasse uma <strong>interface intuitiva</strong>, visual e de fácil utilização era uma prioridade, e um desafio, pra nossa área de compras. Desde que implantamos a VMarket, sei que o time trabalha com mais facilidade e que os <strong>erros foram diminuindo</strong>.</p>
       </div>
       <div class="dcard">
         <div class="dcard-head">
@@ -441,7 +512,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
           <div class="who"><b>Alberto</b><span>Grupo Rio's</span></div>
           <img class="badge" src="riosgp.webp" alt="Boteco Rio's">
         </div>
-        <p>Empresa parceira que vem contribuindo bastante no dia a dia na consolidação de pedidos e cotações. Um sistema interativo e de fácil utilização, sempre aberto a sugestões de melhoria e novas implementações, com muita preocupação com a satisfação dos usuários e parceiros.</p>
+        <p>Empresa parceira que vem contribuindo bastante no dia a dia na <strong>consolidação de pedidos e cotações</strong>. Um sistema interativo e de fácil utilização, sempre aberto a sugestões de melhoria e novas implementações, com muita preocupação com a satisfação dos usuários e parceiros.</p>
       </div>
     </div>
     <div class="depo-videos rev">
@@ -482,6 +553,22 @@ footer a{color:var(--verde-claro);text-decoration:none}
         <summary>Qual a vantagem pra um restaurante ou bar?</summary>
         <div class="resp">Mais poder de pesquisa e barganha, com eficiência nas etapas de inventário, cotação, compra e recebimento. A operação de compras fica simples, com 100% de transparência e gestão. Clientes ativos economizam até 25% no custo de mercadorias.</div>
       </details>
+      <details>
+        <summary>Meu fornecedor precisa pagar para responder?</summary>
+        <div class="resp">Não. Ele recebe um link por WhatsApp ou e-mail e informa preço, prazo e condição direto no formulário de cotação.</div>
+      </details>
+      <details>
+        <summary>Preciso trocar meu ERP?</summary>
+        <div class="resp">Não. A VMarket pode operar como camada de compras e também possui integração via API com ERPs como Totvs, OMIE e outros.</div>
+      </details>
+      <details>
+        <summary>Serve para restaurante pequeno ou só para rede?</summary>
+        <div class="resp">Serve para operações com rotina recorrente de compras. Restaurantes independentes ganham velocidade e comparação de preço, enquanto redes ganham padronização e compra centralizada.</div>
+      </details>
+      <details>
+        <summary>Quanto tempo leva para começar?</summary>
+        <div class="resp">O primeiro passo é subir sua lista de produtos e fornecedores. Depois disso, você já consegue disparar cotações automáticas e comparar respostas em uma única tela.</div>
+      </details>
     </div>
   </div>
 </section>
@@ -489,9 +576,9 @@ footer a{color:var(--verde-claro);text-decoration:none}
 <section class="final">
   <div class="wrap rev">
     <span class="eyebrow" style="color:#F1D9C2">Comece a economizar</span>
-    <h2 style="margin-top:16px">Automatize suas compras e economize até 25%</h2>
-    <p>Fale com um consultor e veja a plataforma funcionando com a sua lista de compras e os seus fornecedores.</p>
-    <a class="btn big" href="form/">Falar com um consultor</a>
+    <h2 style="margin-top:16px">Automatize suas compras e descubra onde sua operação pode economizar</h2>
+    <p>Fale com um consultor e veja a VMarket funcionando com sua lista de compras, seus fornecedores e sua rotina real.</p>
+    <a class="btn big cta-track" data-cta="final" href="form/">Quero ver quanto posso economizar</a>
     <p class="micro">Demonstração gratuita · sem compromisso</p>
   </div>
 </section>
@@ -503,9 +590,16 @@ footer a{color:var(--verde-claro);text-decoration:none}
   </div>
 </footer>
 
+<a class="mobile-sticky-cta cta-track" data-cta="mobile_sticky" href="form/">Simular minha economia</a>
 <script>
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
 document.querySelectorAll('.rev').forEach(el=>io.observe(el));
+document.querySelectorAll('.cta-track').forEach(function(el){
+  el.addEventListener('click',function(){
+    window.dataLayer=window.dataLayer||[];
+    window.dataLayer.push({event:'cta_click',cta_location:el.dataset.cta||'unknown',cta_text:el.textContent.trim()});
+  });
+});
 </script>
 <script>
 window.TallyConfig = {
