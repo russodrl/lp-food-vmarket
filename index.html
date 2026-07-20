@@ -59,6 +59,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 .hero .cta-note{display:block;font-size:14px;color:#8FA89A;margin-top:14px}
 .hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);max-width:760px;margin-top:28px}
 .hero .shot-hero::before{content:"";display:block;height:30px;background:#16332A;border-bottom:1px solid rgba(255,255,255,.08);background-image:radial-gradient(circle 4.5px at 20px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 38px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 56px 15px, #3E7A5E 99%, transparent)}
+.hero .shot-hero.dashboard-shot::before{display:none}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12);position:relative}
 .stats b{display:block;font-size:clamp(24px,2.8vw,32px);font-weight:800;color:#fff;letter-spacing:-.02em}
 .stats span{font-size:13.5px;color:#8FA89A}
@@ -245,7 +246,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
           <a class="btn big cta-track" data-cta="hero" href="form/">Quero ver quanto posso economizar</a>
           <span class="cta-note">Demonstração gratuita, sem compromisso, com sua realidade de compras</span>
         </div>
-        <div class="shot-hero"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Painel de cotação da VMarket com o melhor preço de cada item destacado"></div>
+        <div class="shot-hero dashboard-shot"><img src="hero-dashboard-compras.jpg" alt="Dashboard VMarket com histórico de compras, total em compras, total em notas fiscais e reais de economia"></div>
         <div class="saving-card"><b>Exemplo rápido:</b> se seu restaurante compra R$ 80 mil por mês, 10% de economia representa R$ 8 mil por mês voltando para o caixa.</div>
         <p class="proof-inline">Usado por operações como Fasano, Meliá, Bourbon, Pecorino, Parmê, Graal e outras.</p>
       </div>
