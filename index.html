@@ -50,14 +50,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 /* HERO */
 .hero{background:var(--noite);color:#fff;padding:76px 0 68px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(224,127,58,.2),transparent 65%);pointer-events:none}
-.hero-grid{max-width:920px;position:relative}
+.hero-grid{max-width:920px;margin:0 auto;text-align:center;position:relative}
 .hero .eyebrow{color:var(--ambar)}
 .hero h1{font-size:clamp(32px,4.6vw,50px);margin:20px 0 0;color:#fff}
 .hero h1 .hl{color:var(--ambar)}
-.hero p.lead{font-size:18px;color:var(--verde-claro);max-width:680px;margin-top:20px}
+.hero p.lead{font-size:18px;color:var(--verde-claro);max-width:720px;margin:20px auto 0}
 .hero .cta-row{margin-top:32px}
 .hero .cta-note{display:block;font-size:14px;color:#8FA89A;margin-top:14px}
-.hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);max-width:760px;margin-top:28px}
+.hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);max-width:760px;margin:28px auto 0}
 .hero .shot-hero::before{content:"";display:block;height:30px;background:#16332A;border-bottom:1px solid rgba(255,255,255,.08);background-image:radial-gradient(circle 4.5px at 20px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 38px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 56px 15px, #3E7A5E 99%, transparent)}
 .hero .shot-hero.dashboard-shot::before{display:none}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12);position:relative}
@@ -68,7 +68,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 .logos{background:#fff;padding:52px 0;border-bottom:1px solid var(--linho-borda)}
 .logos p{text-align:center}
 .logos .eyebrow{color:var(--folha)}
-.logos img{margin:26px auto 0;max-width:960px;width:100%}
+.logos img{margin:26px auto 0;max-width:760px;width:100%}
 .logos img.clients-extra{max-width:760px;border-radius:10px}
 
 /* DORES */
@@ -197,8 +197,8 @@ footer a{color:var(--verde-claro);text-decoration:none}
 .dcard-head .who span{font-size:13px;color:var(--tinta-suave)}
 .dcard-head .badge{height:46px;width:46px;max-width:46px;object-fit:contain;flex-shrink:0;opacity:.96}
 
-.proof-inline{font-size:14px;color:#CFE2D7;margin-top:18px;max-width:560px}
-.saving-card{margin-top:22px;max-width:560px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:14px;padding:16px 18px;color:#F4E8DC;font-size:15px}
+.proof-inline{font-size:14px;color:#CFE2D7;margin:18px auto 0;max-width:560px}
+.saving-card{margin:22px auto 0;max-width:560px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.07);border-radius:14px;padding:16px 18px;color:#F4E8DC;font-size:15px}
 .saving-card b{color:#fff}
 .audience{background:#fff}
 .audience-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
@@ -418,11 +418,11 @@ footer a{color:var(--verde-claro);text-decoration:none}
         <h3>Envie seus produtos e fornecedores</h3>
         <p>Subimos sua lista pra você cotar todos os produtos com o máximo de fornecedores possível: os seus e os parceiros da VMarket.</p>
       </div>
-      <div class="shot-wrap"><div class="shot bar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Lista de produtos e fornecedores na VMarket"></div></div>
+      <div class="shot-wrap"><div class="shot"><img src="como-funciona-1.webp" alt="Tela VMarket para enviar produtos e fornecedores"></div></div>
     </div>
 
     <div class="how-row rev">
-      <div class="shot-wrap"><div class="shot"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="whats" alt="Cotação enviada automaticamente por WhatsApp"></div></div>
+      <div class="shot-wrap"><div class="shot"><img src="como-funciona-2.webp" alt="Tela VMarket para abrir cotações para fornecedores"></div></div>
       <div>
         <span class="stepnum">2.</span>
         <h3>Abra cotações para o máximo de fornecedores</h3>
@@ -436,11 +436,11 @@ footer a{color:var(--verde-claro);text-decoration:none}
         <h3>Selecione os melhores preços e faça o pedido</h3>
         <p>Veja o mapa de preços das cotações em tempo real, com tempo de entrega, pedido mínimo e preço padronizados. Com 1 clique você faz o pedido.</p>
       </div>
-      <div class="shot-wrap"><div class="shot bar"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Mapa de preços das cotações em tempo real"></div></div>
+      <div class="shot-wrap"><div class="shot"><img src="como-funciona-3.webp" alt="Mapa de preços das cotações em tempo real na VMarket"></div></div>
     </div>
 
     <div class="how-row rev">
-      <div class="shot-wrap"><div class="telefone"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="app" alt="Aplicativo VMarket para receber pedido e registrar divergências"></div></div>
+      <div class="shot-wrap"><div class="shot"><img src="como-funciona-4.webp" alt="Tela VMarket para receber pedido via app e registrar divergências"></div></div>
       <div>
         <span class="stepnum">4.</span>
         <h3>Receba o pedido via app</h3>
