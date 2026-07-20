@@ -50,14 +50,14 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 /* HERO */
 .hero{background:var(--noite);color:#fff;padding:76px 0 68px;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;right:-160px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(224,127,58,.2),transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:52px;align-items:center;position:relative}
+.hero-grid{max-width:920px;position:relative}
 .hero .eyebrow{color:var(--ambar)}
 .hero h1{font-size:clamp(32px,4.6vw,50px);margin:20px 0 0;color:#fff}
 .hero h1 .hl{color:var(--ambar)}
-.hero p.lead{font-size:18px;color:var(--verde-claro);max-width:560px;margin-top:20px}
+.hero p.lead{font-size:18px;color:var(--verde-claro);max-width:680px;margin-top:20px}
 .hero .cta-row{margin-top:32px}
 .hero .cta-note{display:block;font-size:14px;color:#8FA89A;margin-top:14px}
-.hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12)}
+.hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);max-width:760px;margin-top:28px}
 .hero .shot-hero::before{content:"";display:block;height:30px;background:#16332A;border-bottom:1px solid rgba(255,255,255,.08);background-image:radial-gradient(circle 4.5px at 20px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 38px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 56px 15px, #3E7A5E 99%, transparent)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12);position:relative}
 .stats b{display:block;font-size:clamp(24px,2.8vw,32px);font-weight:800;color:#fff;letter-spacing:-.02em}
@@ -68,6 +68,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 .logos p{text-align:center}
 .logos .eyebrow{color:var(--folha)}
 .logos img{margin:26px auto 0;max-width:960px;width:100%}
+.logos img.clients-extra{max-width:760px;border-radius:10px}
 
 /* DORES */
 .valor{background:var(--linho)}
@@ -150,7 +151,6 @@ footer a{color:var(--verde-claro);text-decoration:none}
 @media (prefers-reduced-motion:reduce){.rev{opacity:1;transform:none;transition:none}}
 
 @media (max-width:960px){
-  .hero-grid{grid-template-columns:1fr}
   .hero .shot-hero{max-width:560px}
   .stats{grid-template-columns:repeat(2,1fr)}
   .valor-grid{grid-template-columns:1fr}
@@ -238,18 +238,16 @@ footer a{color:var(--verde-claro);text-decoration:none}
   <div class="wrap">
     <div class="hero-grid">
       <div>
-        <span class="eyebrow">VMarket • A melhor plataforma de compras para o Food Service</span>
-        <h1>Economize até 25% nas compras do seu restaurante sem depender de planilhas, ligações e áudios no WhatsApp</h1>
-        <p class="lead">Envie cotações automáticas, acesse mais fornecedores, compare o melhor preço de cada item, gerencie estoque e compre com mais margem.</p>
+        <span class="eyebrow">A melhor plataforma de compras para o Food Service</span>
+        <h1>Economize até 25% nas compras do seu restaurante sem depender de planilhas e ligações</h1>
+        <p class="lead">Envie cotações automáticas por whatsapp, acesse mais fornecedores, compare o melhor preço de cada item, gerencie estoque e compre com mais margem</p>
         <div class="cta-row">
           <a class="btn big cta-track" data-cta="hero" href="form/">Quero ver quanto posso economizar</a>
           <span class="cta-note">Demonstração gratuita, sem compromisso, com sua realidade de compras</span>
         </div>
+        <div class="shot-hero"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Painel de cotação da VMarket com o melhor preço de cada item destacado"></div>
         <div class="saving-card"><b>Exemplo rápido:</b> se seu restaurante compra R$ 80 mil por mês, 10% de economia representa R$ 8 mil por mês voltando para o caixa.</div>
         <p class="proof-inline">Usado por operações como Fasano, Meliá, Bourbon, Pecorino, Parmê, Graal e outras.</p>
-      </div>
-      <div>
-        <div class="shot-hero"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="painel" alt="Painel de cotação da VMarket com o melhor preço de cada item destacado"></div>
       </div>
     </div>
     <div class="stats">
@@ -265,6 +263,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
   <div class="wrap rev">
     <p class="eyebrow">Operações que já compram melhor com a VMarket</p>
     <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-asset="clientes" alt="Clientes VMarket: Fasano, Meliá, Intercity, Bourbon, Pecorino, Parmê, Graal e outros">
+    <img class="clients-extra" src="clientes-foodservice-extra.jpg" alt="Clientes VMarket: Parmê, Vamo, Delírio Tropical, Graal, Brewteco, Ferro e Farinha, Jappa da Quitanda, Ponteio, Bar do Adão, Mercado, Bibi, Empório Jardim, Paleto Salt, Elena, Chez Heaven, Ocyá e outros">
   </div>
 </section>
 
