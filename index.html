@@ -616,7 +616,25 @@ window.TallyConfig = {
   }
 };
 </script>
-<script async src="https://tally.so/widgets/embed.js"></script>
+<script>
+(function () {
+  function loadTallyEmbed() {
+    if (document.querySelector('script[data-tally-embed-loader]')) return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://tally.so/widgets/embed.js';
+    s.setAttribute('data-tally-embed-loader', '1');
+    document.body.appendChild(s);
+  }
+
+  if (window.VM_ATTR_READY && typeof window.VM_ATTR_READY.then === 'function') {
+    window.VM_ATTR_READY.then(loadTallyEmbed).catch(loadTallyEmbed);
+    setTimeout(loadTallyEmbed, 1500);
+  } else {
+    loadTallyEmbed();
+  }
+})();
+</script>
 <script src="asset_logodark.js"></script><script src="asset_logowhite.js"></script><script src="asset_clientes.js"></script><script src="asset_painel.js"></script><script src="asset_whats.js"></script><script src="asset_app.js"></script><script>document.querySelectorAll("img[data-asset]").forEach(function(i){if(window.ASSETS&&window.ASSETS[i.dataset.asset])i.src=window.ASSETS[i.dataset.asset]});</script>
 </body>
 </html>
