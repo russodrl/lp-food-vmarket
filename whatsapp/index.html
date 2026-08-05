@@ -49,16 +49,13 @@
       if (!code) code = 'proposta_food';
 
       var message = 'Oi! Vim da proposta da Vmarket e quero falar com comercial.';
-      var whatsappUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
-      var webWhatsappUrl = 'https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
-      var isDesktop = !/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent || '');
-      var finalUrl = isDesktop ? webWhatsappUrl : whatsappUrl;
+      var finalUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
 
       var payload = {
         event: 'whatsapp_redirect',
         whatsapp_phone: phone,
         whatsapp_message_code: code,
-        whatsapp_destination: isDesktop ? 'web_whatsapp' : 'wa_me',
+        whatsapp_destination: 'wa_me',
         page_location: window.location.href,
         page_referrer: document.referrer || '',
         utm_source: source,
@@ -83,7 +80,7 @@
 
       setTimeout(function () {
         window.location.href = finalUrl;
-      }, 650);
+      }, 250);
     })();
   </script>
 </body>
