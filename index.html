@@ -140,9 +140,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(245,241,236,.94);backdro
 .hero .shot-hero{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px -30px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.12);max-width:760px;margin:44px auto 0}
 .hero .shot-hero::before{content:"";display:block;height:30px;background:#16332A;border-bottom:1px solid rgba(255,255,255,.08);background-image:radial-gradient(circle 4.5px at 20px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 38px 15px, #3E7A5E 99%, transparent),radial-gradient(circle 4.5px at 56px 15px, #3E7A5E 99%, transparent)}
 .hero .shot-hero.dashboard-shot::before{display:none}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:56px;padding-top:36px;border-top:1px solid rgba(255,255,255,.12);position:relative}
-.stats b{display:block;font-size:clamp(24px,2.8vw,32px);font-weight:800;color:#fff;letter-spacing:-.02em}
-.stats span{font-size:13.5px;color:#8FA89A}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;position:relative}
+.stats > div{background:linear-gradient(180deg,rgba(255,255,255,.105),rgba(255,255,255,.055));border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:22px 18px 20px;box-shadow:0 22px 54px -36px rgba(0,0,0,.8);text-align:left;min-height:174px}
+.stats .sico{width:30px;height:30px;stroke:var(--ambar);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:14px;display:block}
+.stats .s-label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8FA89A;font-weight:800;margin-bottom:8px}
+.stats b{display:block;font-size:clamp(28px,3.1vw,40px);line-height:1;font-weight:900;color:#fff;letter-spacing:-.04em;margin-bottom:9px}
+.stats span:not(.s-label){display:block;font-size:14px;line-height:1.35;color:#D7E5DC}
+.stats .s-proof{margin-top:10px;color:#8FA89A;font-size:12.5px;line-height:1.35}
 
 /* LOGOS */
 .logos{background:#fff;padding:52px 0;border-bottom:1px solid var(--linho-borda)}
@@ -258,11 +262,8 @@ footer a{color:var(--verde-claro);text-decoration:none}
 @media (max-width:960px){.depo-videos{grid-template-columns:1fr}.depo-grid2{grid-template-columns:1fr}}
 .step .ico{width:42px;height:42px;border-radius:11px;background:var(--noite);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
 .step .ico svg{width:22px;height:22px;stroke:var(--ambar);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.stats .sico{width:28px;height:28px;stroke:var(--ambar);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-bottom:10px;display:block}
 .step{text-align:center}
 .step .ico{margin:0 auto 12px}
-.stats > div{text-align:center}
-.stats .sico{margin:0 auto 10px}
 .how{background:#fff}
 .how-row{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;margin-top:56px}
 .how-row:first-of-type{margin-top:44px}
@@ -296,7 +297,7 @@ footer a{color:var(--verde-claro);text-decoration:none}
 .ba-card li::before{position:absolute;left:0;top:8px;font-weight:800}.ba-before li::before{content:"×";color:#B35E22}.ba-after li::before{content:"✓";color:var(--folha)}
 .video-intro{text-align:center;max-width:760px;margin:44px auto -18px}.video-intro h3{font-size:clamp(22px,3vw,30px);color:var(--noite)}.video-intro p{margin-top:10px;color:var(--tinta-suave)}
 .center-cta{text-align:center;margin:26px auto 0}
-.results{background:#fff}.result-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}.result-grid div{border:1px solid var(--linho-borda);border-radius:16px;padding:22px 18px;background:var(--linho)}.result-grid b{display:block;color:var(--terra);font-family:'DM Mono',monospace;font-size:24px;margin-bottom:8px}.result-grid span{font-size:14.5px;color:var(--tinta)}
+.results{background:#fff}.result-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:36px}.result-grid div{border:1px solid var(--linho-borda);border-radius:18px;padding:24px 18px;background:linear-gradient(180deg,#fff,var(--linho));box-shadow:0 18px 42px -34px rgba(26,58,47,.35)}.result-grid small{display:block;font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--folha);font-weight:800;margin-bottom:9px}.result-grid b{display:block;color:var(--terra);font-family:'DM Mono',monospace;font-size:26px;line-height:1;margin-bottom:8px}.result-grid span{font-size:14.5px;line-height:1.35;color:var(--tinta)}
 .mobile-sticky-cta{display:none}
 @media (max-width:960px){.audience-grid{grid-template-columns:1fr 1fr}.ba-grid{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}.hero h1{font-size:clamp(30px,9vw,44px)}}
 @media (max-width:600px){body{padding-bottom:76px}.audience-grid,.result-grid{grid-template-columns:1fr}.mobile-sticky-cta{display:block;position:fixed;left:14px;right:14px;bottom:12px;z-index:80;text-align:center;background:var(--terra);color:#fff;font-weight:800;text-decoration:none;border-radius:14px;padding:16px 20px;box-shadow:0 14px 34px rgba(26,58,47,.28)}}
@@ -331,10 +332,10 @@ footer a{color:var(--verde-claro);text-decoration:none}
       </div>
     </div>
     <div class="stats">
-      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9.5 20v-6h5v6"/><path d="M3 9h18"/></svg><b>2.000+</b><span>restaurantes, bares e hotéis</span></div>
-      <div><svg class="sico" viewBox="0 0 24 24"><rect x="1" y="6.5" width="13" height="9.5" rx="1"/><path d="M14 9.5h4l3.5 4v2.5H14"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg><b>20.000+</b><span>fornecedores cadastrados</span></div>
-      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg><b>R$ 2 bi+</b><span>processados por ano em compras de food service</span></div>
-      <div><svg class="sico" viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="17" r="2.6"/></svg><b>até 25%</b><span>de economia no CMV</span></div>
+      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M9.5 20v-6h5v6"/><path d="M3 9h18"/></svg><span class="s-label">Base ativa</span><b>2.000+</b><span>operações de food service atendidas</span><p class="s-proof">Restaurantes, bares, hotéis, redes e multiunidades.</p></div>
+      <div><svg class="sico" viewBox="0 0 24 24"><rect x="1" y="6.5" width="13" height="9.5" rx="1"/><path d="M14 9.5h4l3.5 4v2.5H14"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg><span class="s-label">Concorrência</span><b>20.000+</b><span>fornecedores cadastrados na plataforma</span><p class="s-proof">Você pode usar os seus fornecedores e ampliar a disputa.</p></div>
+      <div><svg class="sico" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg><span class="s-label">Volume</span><b>R$ 2 bi+</b><span>em compras de food service processadas por ano</span><p class="s-proof">Histórico para comparar preço, fornecedor e categoria.</p></div>
+      <div><svg class="sico" viewBox="0 0 24 24"><line x1="19" y1="5" x2="5" y2="19"/><circle cx="7" cy="7" r="2.6"/><circle cx="17" cy="17" r="2.6"/></svg><span class="s-label">Margem</span><b>até 25%</b><span>de economia potencial no CMV</span><p class="s-proof">Com mais cotações, melhor preço por item e menos compra no escuro.</p></div>
     </div>
   </div>
 </section>
@@ -534,11 +535,11 @@ footer a{color:var(--verde-claro);text-decoration:none}
     <span class="eyebrow" style="color:var(--folha)">Resultado esperado</span>
     <h2 style="margin-top:14px">Em poucos dias você consegue tirar a compra manual da rotina</h2>
     <div class="result-grid">
-      <div><b>1</b><span>Cadastrar produtos e fornecedores</span></div>
-      <div><b>2</b><span>Disparar cotações automáticas</span></div>
-      <div><b>3</b><span>Comparar preços item a item</span></div>
-      <div><b>4</b><span>Comprar pelo melhor preço</span></div>
-      <div><b>5</b><span>Criar histórico de compras</span></div>
+      <div><small>Setup</small><b>1</b><span>lista de produtos e fornecedores organizada na plataforma</span></div>
+      <div><small>Cotação</small><b>50</b><span>fornecedores podem receber o mesmo pedido de uma vez</span></div>
+      <div><small>Prazo</small><b>2h</b><span>para consolidar respostas em cotações de rotina</span></div>
+      <div><small>Decisão</small><b>item</b><span>melhor preço destacado produto por produto</span></div>
+      <div><small>Margem</small><b>até 25%</b><span>de economia potencial com histórico e mais concorrência</span></div>
     </div>
     <p class="sub">A economia vem de mais concorrência entre fornecedores, histórico de preços e escolha do melhor preço por item, não de achismo.</p>
   </div>
