@@ -48,7 +48,7 @@
       var code = [campaign, medium, content].filter(Boolean).join('_').replace(/[^a-zA-Z0-9_\-]/g, '').slice(0, 80);
       if (!code) code = 'proposta_food';
 
-      var message = 'Olá! Vim da proposta da VMarket Food e quero falar com o comercial. Código: ' + code;
+      var message = 'Oi! Vim da proposta da Vmarket e quero falar com comercial.';
       var whatsappUrl = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
       var webWhatsappUrl = 'https://web.whatsapp.com/send?phone=' + phone + '&text=' + encodeURIComponent(message);
       var isDesktop = !/Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent || '');
